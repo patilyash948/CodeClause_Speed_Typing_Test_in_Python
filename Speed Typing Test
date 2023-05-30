@@ -1,0 +1,26 @@
+import random
+import time
+
+# Create a list of sentences
+sentences = ["The quick brown fox jumps over the lazy dog.",
+              "This is a test of your typing speed.",
+              "Please type as fast as you can.",
+              "Thank you for taking the test."]
+
+# Generate a random sentence
+sentence = random.choice(sentences)
+
+# Start the timer
+start_time = time.time()
+
+# Get the user's input
+user_input = input(sentence)
+
+# Stop the timer
+end_time = time.time()
+
+# Calculate the typing speed
+typing_speed = len(user_input) / (end_time - start_time)
+
+# Display the results
+print("Your typing speed is {} words per minute.".format(typing_speed * 60))
